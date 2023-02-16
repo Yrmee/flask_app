@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template("home.html", utc_dt=datetime.datetime.now().strftime("%d %B %Y %H:%M"))
+    return render_template("home.html", utc_dt=datetime.datetime.now().strftime("%d %B %Y"))
 
 @app.route("/<page_name>")
 def other_page(page_name): 
@@ -14,4 +14,3 @@ def other_page(page_name):
 
 if __name__ == '__main__':
     app.run(debug=True)
-    # app.run(host="0.0.0.0", debug=True)
