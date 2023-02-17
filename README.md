@@ -16,7 +16,7 @@
 
 <br>
 
-### Report: Flask App continious deployment on a VPS with Github Actions.
+### Report: Flask App continuous deployment on a VPS with Github Actions.
 <br>
 
 1. 3 components here
