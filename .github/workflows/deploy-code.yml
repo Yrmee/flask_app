@@ -1,7 +1,5 @@
 name: Deploy Code
 
-# To avoid auto-deploy to server if workflow [Run tests] fails.
-# Run when [Run tests] has run and is successful.
 on:
   workflow_run: 
     workflows: [Run tests]
@@ -10,6 +8,8 @@ on:
 
 jobs:
   build:
+    # Run when [Run tests] has run and is successful.
+    if: ${{ github.event.workflow_run.conclusion == 'succes' }}
 
     runs-on: ubuntu-latest
 
