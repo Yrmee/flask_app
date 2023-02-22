@@ -1,6 +1,11 @@
 name: Deploy Code
 
-on: push
+# Run when [Run tests] has run and was successful.
+on:
+  workflow_run: 
+    workflows: [Run tests]
+    types: 
+      - completed
 
 jobs:
   build:
