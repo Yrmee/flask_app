@@ -1,6 +1,7 @@
 name: Deploy Code
 
-# Run when [Run tests] has run and was successful.
+# To avoid auto-deploy to server if workflow [Run tests] fails.
+# Run when [Run tests] has run and is successful.
 on:
   workflow_run: 
     workflows: [Run tests]
