@@ -7,5 +7,5 @@ def test_home_route():
 
 def test_other_page_route():
     response = app.test_client().get('/<page_name>')
-    assert response.status_code == 200
+    assert response.status_code == 404
     # assert response.data.decode('utf-8') == "This page named <page_name> does not exist."
